@@ -1,7 +1,7 @@
 
 
 import React, { useState } from 'react';
-import useNavigate from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 function RegistrationForm() {
 
@@ -87,7 +87,7 @@ function RegistrationForm() {
           <option value="other">Other</option>
         </select><br /><br />
 
-        <button type="submit" onClick={handelOnclick}>Submit</button>
+        <button type="submit" >Submit</button>
       </form>
     </div>
   );
