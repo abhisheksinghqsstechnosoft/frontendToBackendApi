@@ -1,10 +1,11 @@
 
 
 import React, { useState } from 'react';
+import axios from 'axios';
 import {useNavigate} from 'react-router-dom'
 
 function RegistrationForm() {
-
+    
     const navigate=useNavigate();
   const [formData, setFormData] = useState({
     fullName: '',
@@ -28,11 +29,19 @@ function RegistrationForm() {
 
 
     console.log(formData); 
+
+    axios.post('/formData',formData)
+    .then(console.log('data send successfully'))
+    .catch(e=>console.log(e));
      navigate('/login')// do something with the form data
   };
 
   return (
     <div>
+
+      <button onClick={()=>{
+        navigate('/formData')
+      }}>render data</button>
       <h2>Registration Form</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="fullName">Full Name:</label>

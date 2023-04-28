@@ -13,6 +13,7 @@ const LoginPage = (p) => {
      logOut:
      <button onClick={Onclickhandeller}>Logout</button>
     </div>
+    
   )
 };
 
